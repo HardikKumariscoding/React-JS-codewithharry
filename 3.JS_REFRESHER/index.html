@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>This is the JS refresher</title>
+    <script>
+      let a = 34;
+      console.log(a);
+      // NUMBERS = 3,44,52
+      // objects = CONST CAR = {
+      // NAME: "McLAREN P1", ENGINE: "V8"}
+      // STRING = "tHIS IS A STRING"
+      // BOOLEAN = True or False
+      function hello() {
+        document.write("<b>Hey Harry</b>");
+      }
+      hello();
+  // OBjects and functions
+      const obj = {
+        a: 23,
+        b: 29,
+        func: function myfunc(number) {
+            console.log("The number is "+ number)
+        }
+      }
+
+      console.log(obj.func(3333333))
+      console.log(obj.b)
+
+      // EVENT LISTENERS
+      let clicked = 0;
+      document.addEventListener("click",()=>{
+       let conf = confirm("Are You Sure ?");
+       if(conf == true){
+        let rating = prompt("give me a rating");
+        console.log("Rating is " + rating);
+
+       }else{
+        console.log("you said no")
+       }
+       
+      })
+
+
+      // Difference between normal function 
+      // normal function = function hello(){
+      // console.log("hello")}
+      // arrow function = 
+      // let hello = ()=>{
+      // console.log("hello")}
+
+      let mobj = {
+        a: this,
+        FUNC: (number)=>{
+            console.log("The number is " + this)
+        }
+      }
+
+      mobj.FUNC(8989898998)
+
+
+
+
+    </script>
+  </head>
+  <body>
+      <h1>
+        I am learning JS
+
+    </h1>
+  </body>
+</html>
