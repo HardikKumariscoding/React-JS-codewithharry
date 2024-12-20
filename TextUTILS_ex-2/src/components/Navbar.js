@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 // rfc
 export default function (props) {
   return (
@@ -8,9 +7,9 @@ export default function (props) {
     >
       <div className="container-fluid">
         {/* Its here  🔽 */}
-        <Link className="navbar-brand" to="/">
+        <a className="navbar-brand" href="/">
           {props.titttle}
-        </Link>
+        </a>
 
         <button
           className="navbar-toggler"
@@ -26,14 +25,14 @@ export default function (props) {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" to="/">
+              <a className="nav-link active" aria-current="page" href="/">
                 Home
-              </Link>
+              </a>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/About">
+              <a className="nav-link" href="/">
                 About
-              </Link>
+              </a>
             </li>
           </ul>
           <div className={`form-check form-switch text-${props.mode === 'light' ? 'light':'dark'} `}>
@@ -47,6 +46,8 @@ export default function (props) {
             <label className="form-check-label" htmlFor="flexSwitchCheckDefault">
              Enable Dark Mode
             </label>
+            {/* <div className="icon"></div> */}
+            <button  className="btn-btn-primary icon" type="button" ></button>
           </div>
 
           {/* <form className="d-flex" role="search">
