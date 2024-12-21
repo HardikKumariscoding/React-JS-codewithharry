@@ -25,7 +25,8 @@ export class News extends Component {
             "title": "WATCH: Chargers utilize obscure NFL rule to hit league's first fair-catch kick field goal since 1976 - CBS Sports",
             "description": null,
             "url": "https://www.cbssports.com/nfl/news/watch-chargers-utilize-obscure-nfl-rule-to-hit-leagues-first-fair-catch-kick-field-goal-since-1976/",
-            "urlToImage": null,
+            "urlToImage": "https://sportshub.cbsistatic.com/i/r/2024/12/20/364490e4-1d9e-4fb8-b51c-94dbc3f5de3f/thumbnail/770x433/8294dacf328f4f6f20f2376ffbc8e7a9/dicker-g.jpg",
+
             "publishedAt": "2024-12-20T04:35:00Z",
             "content": null
         },
@@ -278,15 +279,15 @@ export class News extends Component {
       <div className='container my-3'>
         <h2>NewsMonkey - Top HeadLines</h2>
      <div className='row'>
-        <div className='col-md-4'>
-             <NewsItem  title="myTitle" description="mydesc" imageUrl="https://www.denverpost.com/wp-content/uploads/2024/12/TDP-L-Chargers-Broncos-RJS-02284.jpg?w=1024&h=705" />
+     {this.state.articles.map((element)=>{
+        return <div className='col-md-4'  key={element.url}>
+        <NewsItem title={element.title} description={element.description} imageUrl={element.urlToImage} newsUrl={element.url}/>
         </div>
-        <div className='col-md-4'>
-             <NewsItem  title="myTitle" description="mydesc" />
-        </div>
-        <div className='col-md-4'>
-             <NewsItem  title="myTitle" description="mydesc" />
-        </div>
+        
+     })}
+
+        
+        
         
         
      </div>
